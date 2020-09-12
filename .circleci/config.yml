@@ -1,0 +1,22 @@
+version: 2
+
+jobs:
+  build-and-test:
+    docker:
+      - image: circleci/python:3.6.4
+    steps:
+      - checkout
+      - run:
+          name: Env
+          command: |
+            sudo pip3 install --upgrade pip
+            sudo pip3 install p4python
+      - run:
+          name: Test
+          command: python3 ./main.py
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build-and-test
