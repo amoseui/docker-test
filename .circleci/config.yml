@@ -9,6 +9,7 @@ jobs:
       - run:
           name: Env
           command: |
+            pip3 install --upgrade pip
             pip3 install p4python
       - run:
           name: Test
