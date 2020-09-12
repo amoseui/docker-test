@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Env
           command: |
-            pip3 install p4python
+            pip install p4python
       - run:
           name: Test
           command: python3 ./main.py
