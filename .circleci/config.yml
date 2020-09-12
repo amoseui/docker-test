@@ -3,13 +3,13 @@ version: 2
 jobs:
   build-and-test:
     docker:
-      - image: circleci/node:10.20.1
+      - image: circleci/python:3.6.4
     steps:
       - checkout
       - run:
           name: Env
           command: |
-            pip install p4python
+            pip3 install p4python
       - run:
           name: Test
           command: python3 ./main.py
