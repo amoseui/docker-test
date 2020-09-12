@@ -9,8 +9,8 @@ jobs:
       - run:
           name: Env
           command: |
-            pip3 install --upgrade pip
-            pip3 install p4python
+            sudo pip3 install --upgrade pip
+            sudo pip3 install p4python
       - run:
           name: Test
           command: python3 ./main.py
